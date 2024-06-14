@@ -1,15 +1,13 @@
 const path = require('path');
 const replaceLib = require('@ant-design/tools/lib/replaceLib');
 const getWebpackConfig = require('@ant-design/tools/lib/getWebpackConfig');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const EsbuildPlugin = require('esbuild-webpack-plugin').default;
+const { ESBuildMinifyPlugin } = require('esbuild-loader');
 const { version } = require('../package.json');
 const themeConfig = require('./themeConfig');
 
 const { webpack } = getWebpackConfig;
 
 const isDev = process.env.NODE_ENV === 'development';
-const usePreact = process.env.REACT_ENV === 'preact';
 
 function alertBabelConfig(rules) {
   rules.forEach(rule => {
@@ -58,12 +56,16 @@ module.exports = {
   },
   lessConfig: {
     javascriptEnabled: true,
+    modifyVars: {
+      'root-entry-name': 'variable',
+    },
   },
   webpackConfig(config) {
     config.resolve.alias = {
       'antd/lib': path.join(process.cwd(), 'components'),
       'antd/es': path.join(process.cwd(), 'components'),
-      antd: path.join(process.cwd(), 'index'),
+      // Change antd from `index.js` to `site/antd.js` to remove deps of root style
+      antd: path.join(process.cwd(), 'site', 'antd'),
       site: path.join(process.cwd(), 'site'),
       'react-router': 'react-router/umd/ReactRouter',
     };
@@ -72,29 +74,23 @@ module.exports = {
       'react-router-dom': 'ReactRouterDOM',
     };
 
-    if (usePreact) {
-      config.resolve.alias = {
-        ...config.resolve.alias,
-        react: 'preact-compat',
-        'react-dom': 'preact-compat',
-        'create-react-class': 'preact-compat/lib/create-react-class',
-        'react-router': 'react-router',
-      };
-    }
-
     if (isDev) {
       config.devtool = 'source-map';
 
       // Resolve use react hook fail when yarn link or npm link
       // https://github.com/webpack/webpack/issues/8607#issuecomment-453068938
-      config.resolve.alias = { ...config.resolve.alias, react: require.resolve('react') };
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        'react/jsx-runtime': require.resolve('react/jsx-runtime'),
+        react: require.resolve('react'),
+      };
     } else if (process.env.ESBUILD) {
       // use esbuild
       config.optimization.minimizer = [
-        new EsbuildPlugin({
-          target: 'chrome49',
+        new ESBuildMinifyPlugin({
+          target: 'es2015',
+          css: true,
         }),
-        new CssMinimizerPlugin(),
       ];
     }
 
@@ -124,6 +120,5 @@ module.exports = {
 
   htmlTemplateExtraData: {
     isDev,
-    usePreact,
   },
 };
