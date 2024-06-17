@@ -22,7 +22,11 @@ function finalizeCompile() {
     fs.readdir(componentsPath, (err, files) => {
       files.forEach(file => {
         if (fs.existsSync(path.join(componentsPath, file, 'style', 'index.less'))) {
-          componentsLessContent += `@import "../${path.join(file, 'style', 'index.less')}";\n`;
+          componentsLessContent += `@import "../${path.posix.join(
+            file,
+            'style',
+            'index.less',
+          )}";\n`;
         }
       });
       fs.writeFileSync(
@@ -86,6 +90,7 @@ function finalizeDist() {
     buildThemeFile('default', defaultVars);
     buildThemeFile('dark', darkVars);
     buildThemeFile('compact', compactVars);
+    buildThemeFile('variable', {});
     fs.writeFileSync(
       path.join(process.cwd(), 'dist', `theme.js`),
       `
@@ -121,12 +126,61 @@ module.exports = {
   }
 }
 
+function isComponentStyle(file) {
+  return file.path.match(/style(\/|\\)index\.tsx/);
+}
+
+function needTransformStyle(content) {
+  return content.includes('./index.less');
+}
+
 module.exports = {
   compile: {
+    transformTSFile(file) {
+      if (isComponentStyle(file)) {
+        let content = file.contents.toString();
+
+        if (needTransformStyle(content)) {
+          const cloneFile = file.clone();
+
+          // Origin
+          content = content.replace('./index.less', './index-default.less');
+          cloneFile.contents = Buffer.from(content);
+
+          return cloneFile;
+        }
+      }
+    },
+    transformFile(file) {
+      if (isComponentStyle(file)) {
+        const content = file.contents.toString();
+
+        if (needTransformStyle(content)) {
+          const cloneFile = file.clone();
+          cloneFile.contents = Buffer.from(
+            [
+              // Inject variable
+              '@root-entry-name: default',
+              // Point to origin file
+              "@import './index';",
+            ].join('\n\n'),
+          );
+          cloneFile.path = cloneFile.path.replace('index.tsx', 'index-default.less');
+          return cloneFile;
+        }
+      }
+      return [];
+    },
+    lessConfig: {
+      modifyVars: {
+        'root-entry-name': 'default',
+      },
+    },
     finalize: finalizeCompile,
   },
   dist: {
     finalize: finalizeDist,
   },
   generateThemeFileContent,
+  bail: true,
 };
