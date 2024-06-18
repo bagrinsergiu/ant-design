@@ -1,6 +1,6 @@
 {
   "name": "antd",
-  "version": "4.7.0",
+  "version": "4.7.0-lfr",
   "description": "An enterprise-class UI design language and React components implementation",
   "title": "Ant Design",
   "keywords": [
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ant-design/ant-design"
+    "url": "git@github.com:zeleniucvladislav/ant-design.git"
   },
   "license": "MIT",
   "contributors": [
@@ -48,7 +48,7 @@
   "scripts": {
     "api-collection": "antd-tools run api-collection",
     "authors": "node ./scripts/generate-authors",
-    "build": "npm run compile && NODE_OPTIONS='--max-old-space-size=4096' npm run dist",
+    "build": "npm run compile && npm run dist",
     "bundlesize": "bundlesize",
     "check-commit": "node ./scripts/check-commit",
     "prestart": "npm run version",
