@@ -165,7 +165,7 @@
   cursor: pointer;
 }
 .ant-image-preview-operations-operation-disabled {
-  color: rgba(255, 255, 255, 0.45);
+  color: #fff;
   pointer-events: none;
 }
 .ant-image-preview-operations-operation:last-of-type {

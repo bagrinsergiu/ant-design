@@ -158,6 +158,7 @@ Mentions.getMentions = (value: string = '', config?: MentionsConfig): MentionsEn
       if (hitPrefix !== null) {
         return {
           prefix: hitPrefix,
+          // @ts-ignore
           value: str.slice(hitPrefix!.length),
         };
       }

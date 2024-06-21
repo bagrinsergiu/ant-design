@@ -20,6 +20,7 @@ const ActionButton: React.FC<ActionButtonProps> = props => {
     let timeoutId: number;
     if (props.autoFocus) {
       const $this = ref.current as HTMLInputElement;
+      // @ts-ignore
       timeoutId = setTimeout(() => $this.focus());
     }
     return () => {
