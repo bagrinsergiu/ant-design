@@ -114,8 +114,8 @@
   border-color: #1890ff;
 }
 .ant-radio-input:focus + .ant-radio-inner {
-  -webkit-box-shadow: 0 0 0 3px #1890ff;
-          box-shadow: 0 0 0 3px #1890ff;
+  -webkit-box-shadow: 0 0 0 3px #1890ff14;
+          box-shadow: 0 0 0 3px #1890ff14;
 }
 .ant-radio-checked::after {
   position: absolute;
@@ -278,8 +278,8 @@ span.ant-radio + * {
   color: #1890ff;
 }
 .ant-radio-button-wrapper:focus-within {
-  -webkit-box-shadow: 0 0 0 3px #1890ff;
-          box-shadow: 0 0 0 3px #1890ff;
+  -webkit-box-shadow: 0 0 0 3px #1890ff14;
+          box-shadow: 0 0 0 3px #1890ff14;
 }
 .ant-radio-button-wrapper .ant-radio-inner,
 .ant-radio-button-wrapper input[type='checkbox'],
@@ -316,8 +316,8 @@ span.ant-radio + * {
   background-color: #096dd9;
 }
 .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus-within {
-  -webkit-box-shadow: 0 0 0 3px #1890ff;
-          box-shadow: 0 0 0 3px #1890ff;
+  -webkit-box-shadow: 0 0 0 3px #1890ff14;
+          box-shadow: 0 0 0 3px #1890ff14;
 }
 .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
   color: #fff;
@@ -335,8 +335,8 @@ span.ant-radio + * {
   border-color: #096dd9;
 }
 .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus-within {
-  -webkit-box-shadow: 0 0 0 3px #1890ff;
-          box-shadow: 0 0 0 3px #1890ff;
+  -webkit-box-shadow: 0 0 0 3px #1890ff14;
+          box-shadow: 0 0 0 3px #1890ff14;
 }
 .ant-radio-button-wrapper-disabled {
   color: rgba(0, 0, 0, 0.25);

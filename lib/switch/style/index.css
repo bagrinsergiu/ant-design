@@ -82,8 +82,8 @@
           box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
 }
 .ant-switch-checked:focus {
-  -webkit-box-shadow: 0 0 0 2px #1890ff;
-          box-shadow: 0 0 0 2px #1890ff;
+  -webkit-box-shadow: 0 0 0 2px #1890ff33;
+          box-shadow: 0 0 0 2px #1890ff33;
 }
 .ant-switch:focus:hover {
   -webkit-box-shadow: none;

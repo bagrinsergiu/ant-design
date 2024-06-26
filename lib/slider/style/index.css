@@ -159,15 +159,15 @@
   transition: border-color 0.3s, box-shadow 0.6s, transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28), -webkit-box-shadow 0.6s, -webkit-transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 .ant-slider-handle-dragging.ant-slider-handle-dragging.ant-slider-handle-dragging {
-  border-color: #1890ff;
-  -webkit-box-shadow: 0 0 0 5px #1890ff;
-          box-shadow: 0 0 0 5px #1890ff;
+  border-color: #46a6ff;
+  -webkit-box-shadow: 0 0 0 5px #1890ff1f;
+          box-shadow: 0 0 0 5px #1890ff1f;
 }
 .ant-slider-handle:focus {
-  border-color: #1890ff;
+  border-color: #46a6ff;
   outline: none;
-  -webkit-box-shadow: 0 0 0 5px #1890ff;
-          box-shadow: 0 0 0 5px #1890ff;
+  -webkit-box-shadow: 0 0 0 5px #1890ff1f;
+          box-shadow: 0 0 0 5px #1890ff1f;
 }
 .ant-slider-handle.ant-tooltip-open {
   border-color: #1890ff;
@@ -227,7 +227,7 @@
   margin-left: -4px;
 }
 .ant-slider-dot-active {
-  border-color: #1890ff;
+  border-color: #8cc8ff;
 }
 .ant-slider-disabled {
   cursor: not-allowed;

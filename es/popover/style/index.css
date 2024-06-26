@@ -74,7 +74,7 @@
 }
 .ant-popover::after {
   position: absolute;
-  background: #000;
+  background: #ffffff03;
   content: '';
 }
 .ant-popover-hidden {

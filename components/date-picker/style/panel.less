@@ -182,7 +182,9 @@
 
     // >>> Hover
     &:hover:not(&-in-view),
-    &:hover:not(&-selected):not(&-range-start):not(&-range-end):not(&-range-hover-start):not(&-range-hover-end) {
+    &:hover:not(&-selected):not(&-range-start):not(&-range-end):not(&-range-hover-start):not(
+        &-range-hover-end
+      ) {
       .@{cellClassName} {
         background: @picker-basic-cell-hover-color;
       }
@@ -618,7 +620,7 @@
       }
 
       &-active {
-        background: fade(@calendar-item-active-bg, 20%);
+        background: @calendar-item-active-bg-fade-20;
       }
 
       &:hover {

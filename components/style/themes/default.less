@@ -11,23 +11,31 @@
 
 // -------- Colors -----------
 @primary-color: @blue-6;
-@primary-color-lighten-35 : @primary-color;
-@primary-color-lighten-20 : @primary-color;
-@primary-color-tint-20 : @primary-color;
-@primary-color-fade-12 : @primary-color;
-@primary-color-tint-50 : @primary-color;
-@primary-color-fade-8 : @primary-color;
+@primary-color-lighten-35: #cbe6ff;
+@primary-color-lighten-20: #7ec1ff;
+@primary-color-tint-20: #46a6ff;
+@primary-color-fade-12: #1890ff1f;
+@primary-color-tint-50: #8cc8ff;
+@primary-color-fade-8: #1890ff14;
 
 @info-color: @primary-color;
+@info-color-1: ~`colorPalette('@{info-color}', 1) `;
+@info-color-3: ~`colorPalette('@{info-color}', 3) `;
 @success-color: @green-6;
+@success-color-1: ~`colorPalette('@{success-color}', 1) `;
+@success-color-3: ~`colorPalette('@{success-color}', 3) `;
 @processing-color: @blue-6;
 @error-color: @red-5;
+@error-color-1: ~`colorPalette('@{error-color}', 1) `;
+@error-color-3: ~`colorPalette('@{error-color}', 3) `;
 @highlight-color: @red-5;
 @warning-color: @gold-6;
+@warning-color-1: ~`colorPalette('@{warning-color}', 1) `;
+@warning-color-3: ~`colorPalette('@{warning-color}', 3) `;
 @normal-color: #d9d9d9;
 @white: #fff;
 @black: #000;
-@white-fade-1 : @black;
+@white-fade-1: #ffffff03;
 
 // Color used by default to control hover and active backgrounds and for
 // alert info backgrounds.
@@ -61,12 +69,12 @@
 @text-color: fade(@black, 85%);
 @text-color-secondary: fade(@black, 45%);
 @text-color-inverse: @white;
-@text-color-inverse-fade-50 : fade(#ffffff, 50%);
+@text-color-inverse-fade-50: #ffffff80;
 @icon-color: inherit;
 @icon-color-hover: fade(@black, 75%);
 @heading-color: fade(@black, 85%);
-@text-color-dark: @white;
-@text-color-secondary-dark: @white;
+@text-color-dark: #ffffffd9;
+@text-color-secondary-dark: #ffffffa6;
 @text-selection-bg: @primary-color;
 @font-variant-base: tabular-nums;
 @font-feature-settings-base: 'tnum';
@@ -280,7 +288,7 @@
 @radio-disabled-button-checked-bg: tint(@black, 90%);
 @radio-disabled-button-checked-color: @disabled-color;
 @radio-wrapper-margin-right: 8px;
-@radio-focus-shadow-color : @primary-color-fade-8;
+@radio-focus-shadow-color: @primary-color-fade-8;
 
 // Media queries breakpoints
 // Extra small screen / phone
@@ -595,7 +603,7 @@
 @table-selected-row-color: inherit;
 @table-selected-row-bg: @primary-1;
 @table-body-selected-sort-bg: @table-selected-row-bg;
-@table-selected-row-hover-bg: darken(@table-selected-row-bg, 2%);
+@table-selected-row-hover-bg: #e8f4ff;
 @table-expanded-row-bg: #fbfbfb;
 @table-padding-vertical: 16px;
 @table-padding-horizontal: 16px;
@@ -612,9 +620,10 @@
 @table-font-size-sm: @table-font-size;
 // Sorter
 // Legacy: `table-header-sort-active-bg` is used for hover not real active
-@table-header-sort-active-bg: @table-header-bg;
+@table-header-sort-active-bg: #f2f2f2;
 // Filter
-@table-header-filter-active-bg: @table-header-sort-active-bg;
+@table-header-filter-active-bg: #e5e5e5;
+@table-header-sort-active-filter-bg: #f7f7f7;
 @table-filter-btns-bg: inherit;
 @table-filter-dropdown-bg: @component-background;
 @table-expand-icon-bg: @component-background;
@@ -655,6 +664,7 @@
 @calendar-input-bg: @input-bg;
 @calendar-border-color: @border-color-inverse;
 @calendar-item-active-bg: @item-active-bg;
+@calendar-item-active-bg-fade-20: #1890ff33;
 @calendar-full-bg: @calendar-bg;
 @calendar-full-panel-bg: @calendar-full-bg;
 
@@ -778,7 +788,7 @@
 @switch-sm-min-width: 28px;
 @switch-disabled-opacity: 0.4;
 @switch-color: @primary-color;
-@switch-color-fade-20 : @primary-color;
+@switch-color-fade-20: #1890ff33;
 @switch-bg: @component-background;
 @switch-shadow-color: fade(#00230b, 20%);
 @switch-padding: 2px;
@@ -895,17 +905,17 @@
 
 // Alert
 // ---
-@alert-success-border-color: ~`colorPalette('@{success-color}', 3) `;
-@alert-success-bg-color: ~`colorPalette('@{success-color}', 1) `;
+@alert-success-border-color: @success-color-3;
+@alert-success-bg-color: @success-color-1;
 @alert-success-icon-color: @success-color;
-@alert-info-border-color: ~`colorPalette('@{info-color}', 3) `;
-@alert-info-bg-color: ~`colorPalette('@{info-color}', 1) `;
+@alert-info-border-color: @info-color-3;
+@alert-info-bg-color: @info-color-1;
 @alert-info-icon-color: @info-color;
-@alert-warning-border-color: ~`colorPalette('@{warning-color}', 3) `;
-@alert-warning-bg-color: ~`colorPalette('@{warning-color}', 1) `;
+@alert-warning-border-color: @warning-color-3;
+@alert-warning-bg-color: @warning-color-1;
 @alert-warning-icon-color: @warning-color;
-@alert-error-border-color: ~`colorPalette('@{error-color}', 3) `;
-@alert-error-bg-color: ~`colorPalette('@{error-color}', 1) `;
+@alert-error-border-color: @error-color-3;
+@alert-error-bg-color: @error-color-1;
 @alert-error-icon-color: @error-color;
 @alert-message-color: @heading-color;
 @alert-text-color: @text-color;

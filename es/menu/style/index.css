@@ -611,7 +611,7 @@
   display: none;
 }
 .ant-menu-inline-collapsed-tooltip a {
-  color: #fff;
+  color: #ffffffd9;
 }
 .ant-menu-inline-collapsed .ant-menu-item-group-title {
   padding-right: 4px;
@@ -686,7 +686,7 @@
 .ant-menu.ant-menu-dark,
 .ant-menu-dark .ant-menu-sub,
 .ant-menu.ant-menu-dark .ant-menu-sub {
-  color: #fff;
+  color: #ffffffa6;
   background: #001529;
 }
 .ant-menu.ant-menu-dark .ant-menu-submenu-title .ant-menu-submenu-arrow,
@@ -731,7 +731,7 @@
 .ant-menu-dark .ant-menu-item-group-title,
 .ant-menu-dark .ant-menu-item > a,
 .ant-menu-dark .ant-menu-item > span > a {
-  color: #fff;
+  color: #ffffffa6;
 }
 .ant-menu-dark.ant-menu-inline,
 .ant-menu-dark.ant-menu-vertical,
