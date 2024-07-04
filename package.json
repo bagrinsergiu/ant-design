@@ -244,7 +244,7 @@
     "rc-queue-anim": "^1.6.12",
     "rc-scroll-anim": "^2.5.8",
     "rc-tween-one": "^2.4.1",
-    "rc-virtual-list": "3.1.1",
+    "rc-virtual-list": "github:bagrinsergiu/virtual-list#remove_builded_folders_from_git_ignore_to_can_install_fork_locally",
     "react": "^16.9.0",
     "react-color": "^2.17.3",
     "react-copy-to-clipboard": "^5.0.1",
@@ -290,6 +290,10 @@
   "peerDependencies": {
     "react": ">=16.9.0",
     "react-dom": ">=16.9.0"
+  },
+  "overrides": {
+    "rc-select": "github:bagrinsergiu/select#11.4.1-remove_builded_folders_from_git_ignore_to_can_install_fork_locally",
+    "rc-virtual-list": "github:bagrinsergiu/virtual-list#remove_builded_folders_from_git_ignore_to_can_install_fork_locally"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
