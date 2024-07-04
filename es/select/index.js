@@ -21,6 +21,7 @@ var Select = /*#__PURE__*/function (_React$Component) {
     var _this;
     _classCallCheck(this, Select);
     _this = _callSuper(this, Select, arguments);
+    // @ts-ignore
     _this.selectRef = /*#__PURE__*/React.createRef();
     _this.focus = function () {
       if (_this.selectRef.current) {

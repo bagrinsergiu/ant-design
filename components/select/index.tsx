@@ -51,6 +51,7 @@ class Select<ValueType extends SelectValue = SelectValue> extends React.Componen
     bordered: true,
   };
 
+  // @ts-ignore
   selectRef = React.createRef<RcSelect<ValueType>>();
 
   public focus = () => {
