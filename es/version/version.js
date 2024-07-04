@@ -1,1 +1,1 @@
-export default '4.7.0-lfr';
+export default '4.7.0-lts';
