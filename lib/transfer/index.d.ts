@@ -95,8 +95,20 @@ declare class Transfer extends React.Component<TransferProps, TransferState> {
     setStateKeys: (direction: TransferDirection, keys: string[] | ((prevKeys: string[]) => string[])) => void;
     getTitles(transferLocale: TransferLocale): string[];
     getLocale: (transferLocale: TransferLocale, renderEmpty: RenderEmptyHandler) => {
+        notFoundContent: React.ReactNode;
         titles: string[];
-        notFoundContent: string | number | boolean | {} | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactNodeArray | React.ReactPortal | null | undefined;
+        searchPlaceholder: string;
+        itemUnit: string;
+        itemsUnit: string;
+        remove: string;
+        selectAll: string;
+        selectCurrent: string;
+        selectInvert: string;
+        removeAll: string;
+        removeCurrent: string;
+    } | {
+        titles: string[];
+        notFoundContent: React.ReactNode;
         searchPlaceholder: string;
         itemUnit: string;
         itemsUnit: string;
