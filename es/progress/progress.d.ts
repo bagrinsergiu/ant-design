@@ -48,12 +48,12 @@ export default class Progress extends React.Component<ProgressProps> {
         percent: number;
         showInfo: boolean;
         trailColor: null;
-        size: "small" | "default" | undefined;
+        size: ProgressSize | undefined;
         gapDegree: undefined;
         strokeLinecap: "round" | "butt" | "square" | undefined;
     };
     getPercentNumber(): number;
-    getProgressStatus(): "success" | "normal" | "active" | "exception";
+    getProgressStatus(): "normal" | "active" | "success" | "exception";
     renderProcessInfo(prefixCls: string, progressStatus: typeof ProgressStatuses[number]): React.JSX.Element | null;
     renderProgress: ({ getPrefixCls, direction }: ConfigConsumerProps) => React.JSX.Element;
     render(): React.JSX.Element;

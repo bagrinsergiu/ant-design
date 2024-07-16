@@ -136,7 +136,7 @@
     "rc-progress": "3.1.0",
     "rc-rate": "~2.8.2",
     "rc-resize-observer": "0.2.5",
-    "rc-select": "github:bagrinsergiu/select#11.4.1-remove_builded_folders_from_git_ignore_to_can_install_fork_locally",
+    "rc-select": "11.4.1",
     "rc-slider": "9.5.3",
     "rc-steps": "4.1.2",
     "rc-switch": "3.2.1",
@@ -235,7 +235,7 @@
     "mockdate": "^3.0.0",
     "node-fetch": "^2.6.0",
     "open": "^7.0.3",
-    "preact": "^10.0.0",
+    "preact": "^8.5.3",
     "preact-compat": "^3.18.5",
     "prettier": "^2.0.1",
     "pretty-quick": "^3.0.0",
@@ -281,7 +281,7 @@
     "stylelint-declaration-block-no-ignored-properties": "^2.1.0",
     "stylelint-order": "^4.0.0",
     "theme-switcher": "^1.0.2",
-    "typescript": "~4.0.0",
+    "typescript": "~4.5.0",
     "webpack-bundle-analyzer": "^3.6.0",
     "xhr-mock": "^2.4.1",
     "xhr2": "^0.2.0",
@@ -292,7 +292,7 @@
     "react-dom": ">=16.9.0"
   },
   "overrides": {
-    "rc-select": "github:bagrinsergiu/select#11.4.1-remove_builded_folders_from_git_ignore_to_can_install_fork_locally",
+    "esbuild":"^0.23.0",
     "rc-virtual-list": "github:bagrinsergiu/virtual-list#remove_builded_folders_from_git_ignore_to_can_install_fork_locally"
   },
   "publishConfig": {

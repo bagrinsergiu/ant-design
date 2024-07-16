@@ -62,7 +62,7 @@ export default class TransferList extends React.PureComponent<TransferListProps,
     getCurrentPageItems: () => void;
     renderListBody: (renderList: RenderListFunction | undefined, props: TransferListBodyProps) => {
         customize: boolean;
-        bodyContent: {} | React.ReactElement<any, string | ((props: any) => React.ReactElement<any, any> | null) | (new (props: any) => React.Component<any, any, any>)> | null | undefined;
+        bodyContent: React.ReactNode;
     };
     getListBody(prefixCls: string, searchPlaceholder: string, filterValue: string, filteredItems: TransferItem[], notFoundContent: React.ReactNode, filteredRenderItems: RenderedItem[], checkedKeys: string[], renderList?: RenderListFunction, showSearch?: boolean, disabled?: boolean): React.ReactNode;
     getCheckBox(filteredItems: TransferItem[], onItemSelectAll: (dataSource: string[], checkAll: boolean) => void, showSelectAll?: boolean, disabled?: boolean): false | JSX.Element;

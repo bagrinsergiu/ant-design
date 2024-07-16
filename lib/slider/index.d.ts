@@ -58,5 +58,5 @@ export interface SliderRangeProps extends SliderBaseProps {
 export declare type Visibles = {
     [index: number]: boolean;
 };
-declare const Slider: React.ForwardRefExoticComponent<(SliderSingleProps & React.RefAttributes<unknown>) | (SliderRangeProps & React.RefAttributes<unknown>)>;
+declare const Slider: React.ForwardRefExoticComponent<(SliderSingleProps | SliderRangeProps) & React.RefAttributes<unknown>>;
 export default Slider;
