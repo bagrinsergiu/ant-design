@@ -13,7 +13,7 @@ export default function scrollTo(y) {
   var container = getContainer();
   var scrollTop = getScroll(container, true);
   var startTime = Date.now();
-  var frameFunc = function frameFunc() {
+  var _frameFunc = function frameFunc() {
     var timestamp = Date.now();
     var time = timestamp - startTime;
     var nextScrollTop = easeInOutCubic(time > duration ? duration : time, scrollTop, y, duration);
@@ -25,10 +25,10 @@ export default function scrollTo(y) {
       container.scrollTop = nextScrollTop;
     }
     if (time < duration) {
-      raf(frameFunc);
+      raf(_frameFunc);
     } else if (typeof callback === 'function') {
       callback();
     }
   };
-  raf(frameFunc);
+  raf(_frameFunc);
 }

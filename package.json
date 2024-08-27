@@ -136,7 +136,7 @@
     "rc-progress": "3.1.0",
     "rc-rate": "~2.8.2",
     "rc-resize-observer": "0.2.5",
-    "rc-select": "11.4.1",
+    "rc-select": "github:bagrinsergiu/select#11.4.1-remove_builded_folders_from_git_ignore_to_can_install_fork_locally",
     "rc-slider": "9.5.3",
     "rc-steps": "4.1.2",
     "rc-switch": "3.2.1",
@@ -292,7 +292,8 @@
     "react-dom": ">=16.9.0"
   },
   "overrides": {
-    "esbuild":"^0.23.0",
+    "esbuild": "^0.23.0",
+    "rc-select": "github:bagrinsergiu/select#11.4.1-remove_builded_folders_from_git_ignore_to_can_install_fork_locally",
     "rc-virtual-list": "github:bagrinsergiu/virtual-list#remove_builded_folders_from_git_ignore_to_can_install_fork_locally"
   },
   "publishConfig": {
