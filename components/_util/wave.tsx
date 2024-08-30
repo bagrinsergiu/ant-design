@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { findDOMNode } from 'react-dom';
 import TransitionEvents from '@ant-design/css-animation/lib/Event';
 import raf from './raf';
 import { ConfigConsumer, ConfigConsumerProps, CSPConfig, ConfigContext } from '../config-provider';
@@ -26,6 +25,8 @@ function isNotGrey(color: string) {
 export default class Wave extends React.Component<{ insertExtraNode?: boolean }> {
   static contextType = ConfigContext;
 
+  private childrenRef = React.createRef<HTMLDivElement>();
+
   private instance?: {
     cancel: () => void;
   };
@@ -45,7 +46,7 @@ export default class Wave extends React.Component<{ insertExtraNode?: boolean }>
   context: ConfigConsumerProps;
 
   componentDidMount() {
-    const node = findDOMNode(this) as HTMLElement;
+    const node = this.childrenRef.current;
     if (!node || node.nodeType !== 1) {
       return;
     }
@@ -112,8 +113,8 @@ export default class Wave extends React.Component<{ insertExtraNode?: boolean }>
       return;
     }
 
-    const node = findDOMNode(this) as HTMLElement;
-    if (!e || e.target !== node || this.animationStart) {
+    const node = this.childrenRef.current;
+    if (!e || !node || e.target !== node || this.animationStart) {
       return;
     }
     this.resetEffect(node);
@@ -195,7 +196,7 @@ export default class Wave extends React.Component<{ insertExtraNode?: boolean }>
     const { children } = this.props;
     this.csp = csp;
 
-    return children;
+    return <div ref={this.childrenRef}>{children}</div>;
   };
 
   render() {
