@@ -1,6 +1,6 @@
 {
   "name": "antd",
-  "version": "4.7.0-fix-dropdown-v3.5",
+  "version": "4.7.0-fix-dropdown-v3.6",
   "description": "An enterprise-class UI design language and React components implementation",
   "title": "Ant Design",
   "keywords": [
@@ -137,13 +137,13 @@
     "rc-rate": "~2.8.2",
     "rc-resize-observer": "0.2.5",
     "rc-select": "github:bagrinsergiu/select#11.4.1-remove_builded_folders_from_git_ignore_to_can_install_fork_locally",
-    "rc-slider": "9.5.3",
+    "rc-slider": "github:bagrinsergiu/slider#9.7.5-fix-rc-tooltip-v1",
     "rc-steps": "4.1.2",
     "rc-switch": "3.2.1",
     "rc-table": "7.10.2",
     "rc-tabs": "~11.6.0",
     "rc-textarea": "0.3.0",
-    "rc-tooltip": "6.2.0",
+    "rc-tooltip": "github:bagrinsergiu/tooltip#5.3.1-fix-rc-trigger-v1",
     "rc-tree": "~3.10.0",
     "rc-tree-select": "4.1.2",
     "rc-trigger": "5.2.18",
@@ -294,7 +294,7 @@
   "overrides": {
     "@babel/runtime": "7.11.2",
     "esbuild": "^0.23.0",
-    "rc-tooltip": "6.2.0",
+    "rc-tooltip": "github:bagrinsergiu/tooltip#5.3.1-fix-rc-trigger-v1",
     "rc-trigger": "5.2.18",
     "rc-select": "github:bagrinsergiu/select#11.4.1-remove_builded_folders_from_git_ignore_to_can_install_fork_locally",
     "rc-virtual-list": "github:bagrinsergiu/virtual-list#remove_builded_folders_from_git_ignore_to_can_install_fork_locally"
