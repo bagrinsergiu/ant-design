@@ -136,7 +136,7 @@
     "rc-progress": "3.1.0",
     "rc-rate": "~2.8.2",
     "rc-resize-observer": "0.2.5",
-    "rc-select": "https://github.com/bagrinsergiu/select/archive/refs/heads/11.4.1-remove_all_unneded_folders_to_speed_up_instalation_time.tar.gz",
+    "rc-select": "https://github.com/bagrinsergiu/select/archive/refs/tags/11.4.1-lfr2.tar.gz",
     "rc-slider": "9.5.3",
     "rc-steps": "4.1.2",
     "rc-switch": "3.2.1",
@@ -244,7 +244,7 @@
     "rc-queue-anim": "^1.6.12",
     "rc-scroll-anim": "^2.5.8",
     "rc-tween-one": "^2.4.1",
-    "rc-virtual-list": "https://github.com/bagrinsergiu/virtual-list/archive/refs/heads/try-to_remove_all_unneded_files_to_make_shortest_instalation_time.tar.gz",
+    "rc-virtual-list": "https://github.com/bagrinsergiu/virtual-list/archive/refs/tags/3.14.6.tar.gz",
     "react": "^16.9.0",
     "react-color": "^2.17.3",
     "react-copy-to-clipboard": "^5.0.1",
@@ -293,8 +293,8 @@
   },
   "overrides": {
     "esbuild": "^0.23.0",
-    "rc-select": "https://github.com/bagrinsergiu/select/archive/refs/heads/11.4.1-remove_all_unneded_folders_to_speed_up_instalation_time.tar.gz",
-    "rc-virtual-list": "https://github.com/bagrinsergiu/virtual-list/archive/refs/heads/try-to_remove_all_unneded_files_to_make_shortest_instalation_time.tar.gz"
+    "rc-select": "https://github.com/bagrinsergiu/select/archive/refs/tags/11.4.1-lfr2.tar.gz",
+    "rc-virtual-list": "https://github.com/bagrinsergiu/virtual-list/archive/refs/tags/3.14.6.tar.gz"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
