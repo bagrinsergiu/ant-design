@@ -20,7 +20,6 @@ var __rest = this && this.__rest || function (s, e) {
 import * as React from 'react';
 import classNames from 'classnames';
 import toArray from "rc-util/es/Children/toArray";
-import findDOMNode from "rc-util/es/Dom/findDOMNode";
 import copy from 'copy-to-clipboard';
 import omit from 'omit.js';
 import EditOutlined from '@ant-design/icons/EditOutlined';
@@ -245,7 +244,7 @@ var Base = /*#__PURE__*/function (_React$Component) {
       devWarning(toArray(children).every(function (child) {
         return typeof child === 'string';
       }), 'Typography', '`ellipsis` should use string as children only.');
-      var _measure = measure(findDOMNode(this.contentRef.current), {
+      var _measure = measure(this.contentRef.current, {
           rows: rows,
           suffix: suffix
         }, children, this.renderOperations(true), ELLIPSIS_STR),

@@ -1,2 +1,2 @@
-declare const _default: "4.7.0-lts";
+declare const _default: "4.7.0-fix-rc-select-v7";
 export default _default;

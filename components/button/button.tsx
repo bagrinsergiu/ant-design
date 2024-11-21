@@ -5,7 +5,6 @@ import omit from 'omit.js';
 
 import Group from './button-group';
 import { ConfigContext } from '../config-provider';
-import Wave from '../_util/wave';
 import { Omit, tuple } from '../_util/type';
 import devWarning from '../_util/devWarning';
 import SizeContext, { SizeType } from '../config-provider/SizeContext';
@@ -292,7 +291,7 @@ const InternalButton: React.ForwardRefRenderFunction<unknown, ButtonProps> = (pr
     return buttonNode;
   }
 
-  return <Wave>{buttonNode}</Wave>;
+  return buttonNode;
 };
 
 const Button = React.forwardRef<unknown, ButtonProps>(InternalButton) as CompoundedComponent;

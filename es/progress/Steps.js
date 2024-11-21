@@ -16,7 +16,7 @@ var Steps = function Steps(props) {
   var stepWidth = size === 'small' ? 2 : 14;
   var styledSteps = [];
   for (var i = 0; i < steps; i += 1) {
-    styledSteps.push( /*#__PURE__*/React.createElement("div", {
+    styledSteps.push(/*#__PURE__*/React.createElement("div", {
       key: i,
       className: classNames("".concat(prefixCls, "-steps-item"), _defineProperty({}, "".concat(prefixCls, "-steps-item-active"), i <= current - 1)),
       style: {

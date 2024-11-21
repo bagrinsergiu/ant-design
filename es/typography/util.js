@@ -66,7 +66,7 @@ export default (function (originEle, option, content, fixedContent, ellipsisStr)
   ellipsisContainer.style.webkitLineClamp = 'none';
   // Render in the fake container
   var contentList = mergeChildren(toArray(content));
-  render( /*#__PURE__*/React.createElement("div", {
+  render(/*#__PURE__*/React.createElement("div", {
     style: wrapperStyle
   }, /*#__PURE__*/React.createElement("span", {
     style: wrapperStyle

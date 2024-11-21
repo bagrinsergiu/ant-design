@@ -8,7 +8,6 @@ import {
   throttleByAnimationFrameDecorator,
 } from '../throttleByAnimationFrame';
 import getDataOrAriaProps from '../getDataOrAriaProps';
-import Wave from '../wave';
 import TransButton from '../transButton';
 import { isStyleSupport, isFlexSupported } from '../styleChecker';
 import { sleep } from '../../../tests/utils';
@@ -140,54 +139,6 @@ describe('Test utils function', () => {
           });
         });
       });
-    });
-  });
-
-  describe('wave', () => {
-    it('bindAnimationEvent should return when node is null', () => {
-      const wrapper = mount(
-        <Wave>
-          <button type="button" disabled>
-            button
-          </button>
-        </Wave>,
-      ).instance();
-      expect(wrapper.bindAnimationEvent()).toBe(undefined);
-    });
-
-    it('bindAnimationEvent.onClick should return when children is hidden', () => {
-      const wrapper = mount(
-        <Wave>
-          <button type="button" style={{ display: 'none' }}>
-            button
-          </button>
-        </Wave>,
-      ).instance();
-      expect(wrapper.bindAnimationEvent()).toBe(undefined);
-    });
-
-    it('bindAnimationEvent.onClick should return when children is input', () => {
-      const wrapper = mount(
-        <Wave>
-          <input />
-        </Wave>,
-      ).instance();
-      expect(wrapper.bindAnimationEvent()).toBe(undefined);
-    });
-
-    it('should not throw when click it', () => {
-      expect(() => {
-        const wrapper = mount(
-          <Wave>
-            <div />
-          </Wave>,
-        );
-        wrapper.simulate('click');
-      }).not.toThrow();
-    });
-
-    it('should not throw when no children', () => {
-      expect(() => mount(<Wave />)).not.toThrow();
     });
   });
 

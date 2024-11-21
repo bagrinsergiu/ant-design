@@ -62,7 +62,7 @@ export default function confirm(config) {
      */
     setTimeout(function () {
       var runtimeLocale = getConfirmLocale();
-      ReactDOM.render( /*#__PURE__*/React.createElement(ConfirmDialog, _extends({}, props, {
+      ReactDOM.render(/*#__PURE__*/React.createElement(ConfirmDialog, _extends({}, props, {
         prefixCls: prefixCls || "".concat(getRootPrefixCls(), "-modal"),
         rootPrefixCls: getRootPrefixCls(),
         okText: okText || (props.okCancel ? runtimeLocale.okText : runtimeLocale.justOkText),

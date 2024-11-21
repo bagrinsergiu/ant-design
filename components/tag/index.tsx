@@ -11,7 +11,6 @@ import {
   PresetColorType,
   PresetStatusColorType,
 } from '../_util/colors';
-import Wave from '../_util/wave';
 import { LiteralUnion } from '../_util/type';
 
 export { CheckableTagProps } from './CheckableTag';
@@ -112,8 +111,6 @@ const InternalTag: React.ForwardRefRenderFunction<unknown, TagProps> = (
     return null;
   };
 
-  const isNeedWave =
-    'onClick' in props || (children && (children as React.ReactElement<any>).type === 'a');
   const tagProps = omit(props, ['visible']);
   const iconNode = icon || null;
   const kids = iconNode ? (
@@ -132,7 +129,7 @@ const InternalTag: React.ForwardRefRenderFunction<unknown, TagProps> = (
     </span>
   );
 
-  return isNeedWave ? <Wave>{tagNode}</Wave> : tagNode;
+  return tagNode;
 };
 
 const Tag = React.forwardRef<unknown, TagProps>(InternalTag) as TagType;

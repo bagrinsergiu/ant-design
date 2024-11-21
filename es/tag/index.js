@@ -16,7 +16,6 @@ import CloseOutlined from '@ant-design/icons/CloseOutlined';
 import CheckableTag from './CheckableTag';
 import { ConfigContext } from '../config-provider';
 import { PresetColorTypes, PresetStatusColorTypes } from '../_util/colors';
-import Wave from '../_util/wave';
 var PresetColorRegex = new RegExp("^(".concat(PresetColorTypes.join('|'), ")(-inverse)?$"));
 var PresetStatusColorRegex = new RegExp("^(".concat(PresetStatusColorTypes.join('|'), ")$"));
 var InternalTag = function InternalTag(_a, ref) {
@@ -79,7 +78,6 @@ var InternalTag = function InternalTag(_a, ref) {
     }
     return null;
   };
-  var isNeedWave = 'onClick' in props || children && children.type === 'a';
   var tagProps = omit(props, ['visible']);
   var iconNode = icon || null;
   var kids = iconNode ? /*#__PURE__*/React.createElement(React.Fragment, null, iconNode, /*#__PURE__*/React.createElement("span", null, children)) : children;
@@ -88,7 +86,7 @@ var InternalTag = function InternalTag(_a, ref) {
     className: tagClassName,
     style: tagStyle
   }), kids, renderCloseIcon());
-  return isNeedWave ? /*#__PURE__*/React.createElement(Wave, null, tagNode) : tagNode;
+  return tagNode;
 };
 var Tag = /*#__PURE__*/React.forwardRef(InternalTag);
 Tag.displayName = 'Tag';

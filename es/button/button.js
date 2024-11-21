@@ -16,7 +16,6 @@ import classNames from 'classnames';
 import omit from 'omit.js';
 import Group from './button-group';
 import { ConfigContext } from '../config-provider';
-import Wave from '../_util/wave';
 import { tuple } from '../_util/type';
 import devWarning from '../_util/devWarning';
 import SizeContext from '../config-provider/SizeContext';
@@ -204,7 +203,7 @@ var InternalButton = function InternalButton(props, ref) {
   if (isUnborderedButtonType(type)) {
     return buttonNode;
   }
-  return /*#__PURE__*/React.createElement(Wave, null, buttonNode);
+  return buttonNode;
 };
 var Button = /*#__PURE__*/React.forwardRef(InternalButton);
 Button.displayName = 'Button';

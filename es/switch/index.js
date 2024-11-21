@@ -12,7 +12,6 @@ import * as React from 'react';
 import RcSwitch from 'rc-switch';
 import classNames from 'classnames';
 import LoadingOutlined from '@ant-design/icons/LoadingOutlined';
-import Wave from '../_util/wave';
 import { ConfigContext } from '../config-provider';
 import SizeContext from '../config-provider/SizeContext';
 import devWarning from '../_util/devWarning';
@@ -36,15 +35,13 @@ var Switch = /*#__PURE__*/React.forwardRef(function (_a, ref) {
     className: "".concat(prefixCls, "-loading-icon")
   }));
   var classes = classNames(_defineProperty(_defineProperty(_defineProperty({}, "".concat(prefixCls, "-small"), (customizeSize || size) === 'small'), "".concat(prefixCls, "-loading"), loading), "".concat(prefixCls, "-rtl"), direction === 'rtl'), className);
-  return /*#__PURE__*/React.createElement(Wave, {
-    insertExtraNode: true
-  }, /*#__PURE__*/React.createElement(RcSwitch, _extends({}, props, {
+  return /*#__PURE__*/React.createElement(RcSwitch, _extends({}, props, {
     prefixCls: prefixCls,
     className: classes,
     disabled: disabled || loading,
     ref: ref,
     loadingIcon: loadingIcon
-  })));
+  }));
 });
 Switch.__ANT_SWITCH = true;
 Switch.displayName = 'Switch';

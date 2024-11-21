@@ -29,7 +29,7 @@ var Group = function Group(props) {
   if (maxCount && maxCount < numOfChildren) {
     var childrenShow = childrenWithProps.slice(0, maxCount);
     var childrenHidden = childrenWithProps.slice(maxCount, numOfChildren);
-    childrenShow.push( /*#__PURE__*/React.createElement(Popover, {
+    childrenShow.push(/*#__PURE__*/React.createElement(Popover, {
       key: "avatar-popover-key",
       content: childrenHidden,
       trigger: "hover",

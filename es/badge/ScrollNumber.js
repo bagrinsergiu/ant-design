@@ -21,7 +21,7 @@ function getNumberArray(num) {
 function renderNumberList(position, className) {
   var childrenToReturn = [];
   for (var i = 0; i < 30; i++) {
-    childrenToReturn.push( /*#__PURE__*/React.createElement("p", {
+    childrenToReturn.push(/*#__PURE__*/React.createElement("p", {
       key: i.toString(),
       className: classNames(className, {
         current: position === i

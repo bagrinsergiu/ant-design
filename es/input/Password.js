@@ -50,7 +50,7 @@ var Password = /*#__PURE__*/React.forwardRef(function (props, ref) {
       // https://github.com/ant-design/ant-design/issues/23524
       e.preventDefault();
     });
-    return /*#__PURE__*/React.cloneElement( /*#__PURE__*/React.isValidElement(icon) ? icon : /*#__PURE__*/React.createElement("span", null, icon), iconProps);
+    return /*#__PURE__*/React.cloneElement(/*#__PURE__*/React.isValidElement(icon) ? icon : /*#__PURE__*/React.createElement("span", null, icon), iconProps);
   };
   var renderPassword = function renderPassword(_ref) {
     var getPrefixCls = _ref.getPrefixCls;

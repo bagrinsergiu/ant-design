@@ -3,7 +3,6 @@ import RcSwitch from 'rc-switch';
 import classNames from 'classnames';
 import LoadingOutlined from '@ant-design/icons/LoadingOutlined';
 
-import Wave from '../_util/wave';
 import { ConfigContext } from '../config-provider';
 import SizeContext from '../config-provider/SizeContext';
 import devWarning from '../_util/devWarning';
@@ -71,7 +70,6 @@ const Switch = React.forwardRef<unknown, SwitchProps>(
     );
 
     return (
-      <Wave insertExtraNode>
         <RcSwitch
           {...props}
           prefixCls={prefixCls}
@@ -80,7 +78,6 @@ const Switch = React.forwardRef<unknown, SwitchProps>(
           ref={ref}
           loadingIcon={loadingIcon}
         />
-      </Wave>
     );
   },
 ) as CompoundedComponent;
